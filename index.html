@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Special+Elite"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background: #fff;
+        position: relative;
+        height: 100vh;
+      }
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .main-text {
+        font-family: "Special Elite", cursive;
+        font-size: 7em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="centered"><span id="mainText" class="main-text"></span></div>
+  </body>
+  <script>
+    var oldDate = new Date("Jan 01, 2019 00:00:01");
+    var now = new Date().getTime();
+    var distance = now - oldDate;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var text = "Day " + days + " = Hi;";
+    document.getElementById("mainText").innerHTML = text;
+  </script>
+</html>
